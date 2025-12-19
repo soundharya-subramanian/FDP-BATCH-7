@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <h1>Create Account</h1>
+                <p>Join us today and get started</p>
+            </div>
+
+            <form id="registrationForm" class="modern-form">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="fullname" 
+                        name="fullname" 
+                        placeholder="Enter your full name"
+                        required
+                    >
+                    <span class="error-message" id="fullname-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter your email"
+                        required
+                    >
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        placeholder="Enter your phone number"
+                        required
+                    >
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Create a strong password"
+                            required
+                        >
+                        <span class="toggle-password" id="togglePassword">👁️</span>
+                    </div>
+                    <div class="password-strength">
+                        <div class="strength-meter" id="strengthMeter"></div>
+                        <span class="strength-text" id="strengthText">Password strength</span>
+                    </div>
+                    <span class="error-message" id="password-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmpassword">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        id="confirmpassword" 
+                        name="confirmpassword" 
+                        placeholder="Confirm your password"
+                        required
+                    >
+                    <span class="error-message" id="confirmpassword-error"></span>
+                </div>
+
+                <div class="form-group checkbox">
+                    <input 
+                        type="checkbox" 
+                        id="terms" 
+                        name="terms" 
+                        required
+                    >
+                    <label for="terms">I agree to the Terms and Conditions</label>
+                    <span class="error-message" id="terms-error"></span>
+                </div>
+
+                <button type="submit" class="submit-btn">Create Account</button>
+
+                <p class="login-link">Already have an account? <a href="#login">Login here</a></p>
+            </form>
+
+            <div id="successMessage" class="success-message" style="display: none;">
+                <div class="success-content">
+                    <h2>✓ Account Created Successfully!</h2>
+                    <p>Welcome to our platform. You can now login with your credentials.</p>
+                    <button onclick="resetForm()" class="reset-btn">Create Another Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
